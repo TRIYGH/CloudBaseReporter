@@ -1,0 +1,232 @@
+@import 'https://fonts.googleapis.com/css?family=Changa';
+
+html {
+  height: 100%;
+}
+
+body{
+  margin: 0 auto;
+  min-height: 100%;
+  font-family: 'Changa';
+}
+
+.wrapper {
+  padding: 50px 0;
+  background: ghostwhite;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+header, footer {
+  height: 50px;
+  background: #615c60;
+  color: ghostwhite;
+}
+
+header {
+  margin-top: -50px;
+}
+
+footer {
+  margin-bottom: -50px;
+  clear:both;
+}
+
+header h2 {
+  margin: 0 auto;
+  padding: 8.6px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#tabs {
+  position: fixed;
+  /*height: 100%;*/
+  width: 25%;
+  min-width: 25%;
+  float: left;
+  background: #ccc;
+  bottom: 50px;
+  top: 50px;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-content {
+  background: #ccc;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+#map {
+  height: 100%;
+  width: 75%;
+  float: right;
+  padding: 0;
+  margin: 0;
+}
+
+.get_only_one, #corridor_width {
+  border-radius: 5px;
+}
+
+.tab-links {
+  display: inline-flex;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: ghostwhite;
+}
+
+.tab-links li {
+  margin-top: 0px;
+  width: 50%;
+}
+
+.tab-links a {
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 5px 0 5px;
+  border-radius: 0px 0px 0 0;
+  display: inline-block;
+  width: 100%;
+  color: ghostwhite;
+  background: gray;
+}
+
+.tab-links a:visited {
+  text-decoration: none;
+}
+
+.tab {
+    display:none;
+}
+
+.tab.active {
+    display:block;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    text-align: center;
+}
+
+.leg_button {
+  border: 0;
+  background: transparent;
+}
+
+.leg_button:focus {
+  outline: 0;
+}
+
+.glyph {
+  width: 15px;
+  vertical-align: middle;
+}
+
+.button {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Changa';
+  width: 100px;
+}
+
+#start_over {
+  background-color: red;
+}
+
+.data {
+  background: gainsboro;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+#cber {
+  background: gainsboro;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+#cber li {
+  padding: 0 10px;
+  bottom: 50px;
+}
+
+table {
+  text-align: center;
+  padding-left: 20px;
+}
+
+#footer {
+  text-align: center;
+  display: inline-block;
+  width: 60%;
+  margin-left: 30%;
+  margin-right: 20%;
+  margin-top: 15px;
+}
+
+#footer span {
+  /*margin-top: 100px;*/
+  padding: 7px 15px 7px 15px;
+  border-radius: 5px;
+}
+
+#hoverSpot {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+#copy {
+  /*text-align: right; */
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: -30px;
+}
+
+#tooltip {
+    display: none;
+    border: 10px solid grey;
+    width: 80%;
+    position: absolute;
+    background-color: black;
+    bottom: 70px;
+    left: 15px;
+    font-style: italic;
+    color: white;
+    text-align: center;
+}
+
+.tab-links a:hover {
+    background:#a7cce5;
+    text-decoration:none;
+}
+
+li.active a, li.active a:hover {
+background:#ccc;
+color:#4c4c4c;
+}
+
+.airfield {
+  margin-bottom: 7px;
+}
+
+.airfield ul {
+  padding-left: 20px;
+  list-style: square;
+}
+
+.airfield ul li {
+}
+
+.airfield ul li span{
+  margin-left: -15px;
+  font-size: 0.9em;
+}

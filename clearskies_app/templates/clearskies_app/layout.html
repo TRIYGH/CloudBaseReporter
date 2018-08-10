@@ -1,0 +1,86 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
+  <title>ClearSkies</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header><h2><em>ClearSkies</em></h2></header>
+      <div id='tabs'>
+        <ul class='tab-links'>
+          <li class='active'><a href="#tab1">Flight Plan</a></li>
+          <li><a href="#tab2" id="firstSwitch">Weather</a></li>
+        </ul>
+        <div class='tab-content'>
+        <div id="tab1" class='tab active'>
+            <p>Enter Airport Identifier:</p>
+            <div id="leg_boxes">
+              <div class="userinput">
+                <input type="text" name="waypoint" class="get_only_one" style="text-transform:uppercase; outline:none;" placeholder="TAB for new waypoint" autofocus/>
+              </div>
+            </div>
+            <button class="leg_button" onClick="add_leg()">+ Add waypoint</button>
+            <br>
+            <br>
+            <br>
+            <p>Change the corridor width:</p>
+            <input type="number" id="corridor_width" name="corridor_width" min="0.1" max="2.0" step="0.1" style="outline:none; border-radius: 5px;" title="The value must be between 0.1 and 2.0 minutes"><br>
+            <br><button id="get_all" class='button'>Report</button>
+            <button onClick="history.go(0)" id="start_over" class='button'>Start Over</button>
+
+            <div id="tooltip"><strong>Hints</strong><br>
+                Type your departure airport,
+                followed by any changes in direction (waypoints)<br>
+                to your ultimate destination<br>
+                [TAB] to create new waypoints</div>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+        </div>
+        <div id="tab2" class='tab'>
+          <span style="font-size:24px;"><em>Cloud Bases enroute:</em><br></span>
+          <div class='data'>
+            <ul id="cber"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div id="map">Content</div>
+    <footer>
+      <table style="width:100%;">
+
+        <tr>
+          <td>
+            <span style="color: ghostwhite;" id="hoverSpot">Help</span>
+          </td>
+          <td>
+            <span id="footer">
+            <span style="background-color: #66d9ff;">Clear Sky</span>
+            <span style="background-color: #00cc44;">Few</span>
+            <span style="color: black; background-color: yellow;">Scattered</span>
+            <span style="background-color: orange;">Broken</span>
+            <span style="background-color: red;">Overcast</span>
+          </td>
+          <td>
+            <span id="copy" style="color: ghostwhite;">© 2016, ClearSkies</span>
+          </td>
+        </tr>
+      </span>
+    </table>
+    </footer>
+  </div>
+</body>
+{% block scripts %}
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJRBQ0vUyLij18oHW8A_mwdsJbyYnlDUk" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="{% static 'js/csrf.js' %}"></script>
+<script src="{% static 'js/tabs.js' %}"></script>
+<script src="{% static 'js/userinput.js' %}"></script>
+<script src="{% static 'js/ajax_to_legs_test.js' %}"></script>
+<script src="{% static 'js/load_init_map.js' %}"></script>
+<script src="{% static 'js/hover_info.js' %}"></script>
+{% endblock %}
+</html>
